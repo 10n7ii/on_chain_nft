@@ -55,7 +55,7 @@ contract OnChainNft is ERC721Enumerable, Ownable {
             "REPLACE",
             '", "description":"',
             "REPLACE",
-            '", "image": "',
+            '", "image_data": "',
             'data:image/svg+xml;base64,',
             buildImage(),
             '"}')))));
