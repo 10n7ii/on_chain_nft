@@ -25,14 +25,11 @@ contract OnChainNft is ERC721Enumerable, Ownable {
 
   function buildImage() public pure returns(string memory) {
       return Base64.encode(bytes(abi.encodePacked(
-          '<svg width="300px" height="100px">',
-          '<rect x="0" y="50" width="15" height="34" fill="blue" stroke="black" stroke-width="1" transform="rotation">',
-          '<svg xmlns="http://www.w3.org/2000/svg" width="300px" height="100px">',
-          '<circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1">',
-          '<animateMotion path="M 0 0 H 300 Z" dur="3s" repeatCount="indefinite" />',
+          '<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">',
+          '<path fill="none" stroke="lightgrey" d="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />',
+          '<circle r="5" fill="red">',
+          '<animateMotion dur="10s" repeatCount="indefinite" path="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z" />',
           '</circle>',
-          '</svg>',
-          '</rect>',
           '</svg>'
           )));
   }
